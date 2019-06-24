@@ -3,7 +3,10 @@
 APP_ROOT = File.dirname(__FILE__)
 $LOAD_PATH.unshift(File.join(APP_ROOT, 'lib'))
 
-require 'log.rb'
+require 'log'
+require 'printer'
 require 'pry'
+
 log = Log.new(ARGV[0])
-log.webpages
+Printer.views(log.webpages)
+Printer.visits(log.webpages)
