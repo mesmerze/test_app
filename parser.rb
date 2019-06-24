@@ -5,4 +5,4 @@ $LOAD_PATH.unshift(File.join(APP_ROOT, 'lib'))
 
 require 'log.rb'
 require 'pry'
-Log.call
+Log.call(ARGV[0])
