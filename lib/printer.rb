@@ -4,19 +4,16 @@ module Printer
   def self.views(webpages)
     puts 'Views: '
     webpages
-      .transform_values(&:size)
-      .sort_by(&:last)
-      .reverse_each { |item| puts "#{item[0]} #{item[1]} views" }
+      .sort_by(&:views)
+      .reverse_each { |page| puts "#{page.route} #{page.views} views" }
     puts '~~~~~~'
   end
 
   def self.visits(webpages)
     puts 'Visits: '
     webpages
-      .transform_values(&:uniq)
-      .transform_values(&:size)
-      .sort_by(&:last)
-      .reverse_each { |item| puts "#{item[0]} #{item[1]} visits" }
+      .sort_by(&:visits)
+      .reverse_each { |page| puts "#{page.route} #{page.visits} visits" }
     puts '~~~~~~'
   end
 end

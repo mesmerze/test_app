@@ -9,10 +9,7 @@ RSpec.describe Log do
   let(:logfile) { 'spec/fixtures/sample.log' }
 
   it 'receives logfile as input and process it' do
-    expect(subject.webpages).to eq(
-      '/help_page/1' => ['126.318.035.038'],
-      '/contact' => ['184.123.665.067'],
-      '/home' => ['184.123.665.067']
-    )
+    expect(subject.webpages.first).to be_a_kind_of(Webpage)
+    expect(subject.webpages.last.route).to eq('/home')
   end
 end
