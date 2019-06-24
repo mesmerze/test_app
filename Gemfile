@@ -2,5 +2,6 @@
 
 source 'https://rubygems.org'
 
-gem 'rspec'
 gem 'pry-byebug', '~> 3.7'
+gem 'rspec'
+gem 'simplecov', require: false, group: :test
