@@ -5,6 +5,7 @@ $LOAD_PATH.unshift(File.join(APP_ROOT, 'lib'))
 
 require 'log'
 require 'printer'
+require 'webpage'
 require 'pry'
 
 log = Log.new(ARGV[0])
