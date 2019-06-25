@@ -31,3 +31,9 @@ Visits:
 /about 21 visits
 ~~~~~~
 ```
+
+### To Do:
+
+- Add error handling
+- Add log file validations
+- Add multiple logfiles support
